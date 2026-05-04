@@ -1,10 +1,10 @@
 while True:
         try:
-            num1 = float(input('Введите первое число: '))
-            num2 = float(input('Введите второе число: '))
+            num1 = float(input('Enter the first number: '))
+            num2 = float(input('Enter the second number: '))
 
             while True:
-                 op = input('Выберите операцию (+, -, /, *, //, **): ')
+                 op = input('Select operation (+, -, /, *, //, **): ')
                  if op == '+':
                     print("Result: ",round(num1 + num2, 2))
                     break
@@ -30,17 +30,17 @@ while True:
                     break
 
                  else:
-                    print("Неверная операция, выберите из предложенного")
+                    print("Invalid operation, please select from the suggested options!")
 
         except ValueError:
-            print('Ошибка: введите числа')
+            print('Error: enter numbers!')
             continue
         except ZeroDivisionError:
-            print('Ошибка: деление на ноль невозможно!')
+            print('Error: division by zero is not allowed!')
             continue
 
         while True:
-           again = input('Вы хотите что то еще посчитать? (y/n): ').lower()
+           again = input('Do you want to calculate something else? (y/n): ').lower()
 
            if again == 'y' or again == 'д':
             exit_program = False
@@ -49,7 +49,7 @@ while True:
               exit_program = True
               break
            else:
-            print("Пожайлуста выберите y/n")
+            print("Please select y/n")
         if exit_program == True:
             break
 
